@@ -4,11 +4,11 @@
 		private $conn;
 		public $error;
 
-		function connect($host, $dbname, $usuario, $senha)
+		function connect()
 		{
 			try 
 			{
-				$this->conn = new PDO("mysql:host=$host;dbname=$dbname", $usuario, $senha);
+				$this->conn = new PDO("mysql:host=localhost;dbname=contador_de_faltas", "mysql", "mysql1234");
 				$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 				return true;
 			}
@@ -175,9 +175,9 @@
 		{
 			try
 			{
-				$result = $this->conn->query("SHOW TABLES LIKE '$table'")->fetch(PDO::FETCH_NUM);
+        $result = $this->conn->query("SHOW TABLES LIKE '$table'")->fetch(PDO::FETCH_NUM);
 
-				if($result[0])
+				if($result)
 				{
 					return true;
 				}

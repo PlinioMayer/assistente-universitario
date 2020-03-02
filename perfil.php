@@ -14,7 +14,7 @@
 
 			$conn = new connection();
 
-			if($conn->connect('localhost', 'id9792570_contador_de_faltas', 'id9792570_plinio', '1PaM9qCz2OsN'))
+			if($conn->connect())
 			{
 				$tables = $conn->getTables("{$_SESSION['email']}%");
 

@@ -9,7 +9,7 @@
 	include('php/connect.php');
 	$conn = new connection();
 
-	if(!$conn->connect("localhost", "id9792570_contador_de_faltas", "id9792570_plinio", "1PaM9qCz2OsN"))
+	if(!$conn->connect())
 	{
 		include('php/database_connection_error.php');
 	}
