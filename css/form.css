@@ -1,0 +1,152 @@
+.form_div{
+	display: grid;
+	border: 2px solid lightgray;
+	border-radius: 5px;
+	padding: 20px 0;
+	grid-auto-flow: row;
+	grid-template-columns: 1fr;
+	grid-row-gap: 20px;
+	justify-items: center;
+	width: 400px;
+}
+
+.form_div *{
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.title{
+	font-size: 25px;
+	line-height: 30px;
+}
+
+.form{
+	display: grid;
+	grid-auto-flow: row;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto;
+	width: 100%;
+	justify-items: center;
+	grid-row-gap: 20px;
+}
+
+.inputs_1{
+	display: grid;
+	grid-template-columns: 90%;
+	grid-auto-flow: row;
+	grid-auto-rows: auto;
+	grid-row-gap: 20px;
+	justify-content: center;
+	width: 100%;
+}
+
+.inputs_2{
+	display: grid;
+	grid-template-columns: 65% 20%;
+	grid-auto-rows: auto;
+	grid-row-gap: 20px;
+	justify-content: space-evenly;
+	width: 100%;
+}
+
+.inputs_2 .warning:nth-of-type(2n){
+	grid-column: 1/2;
+}
+
+.inputs_2 .warning:nth-of-type(2n + 1){
+	grid-column: 2/3;
+}
+
+.labels{
+	display: inline-block;
+	width: 100%;
+	word-spacing: nowrap;
+	overflow: hidden;
+	border: none;
+	line-height: 100%;
+	font-size: 20px;
+}
+
+.form_item{
+	width: 100%;
+	font-size: 18px;
+	line-height: 25px;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+}
+
+.warning{
+	display: none;
+	width: 100%;
+	line-height: 15px;
+	font-size: 13px;
+	color: red;
+	text-align: left;
+}
+
+.buttons_1{
+	display: grid;
+	grid-template-columns: 40% 40%;
+	grid-auto-flow: row;
+	grid-auto-rows: auto;
+	grid-row-gap: 20px;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.buttons_2{
+	display: grid;
+	grid-template-columns: 100%;
+	grid-auto-flow: row;
+	grid-auto-rows: auto;
+	grid-row-gap: 20px;
+	justify-items: right;
+	width: 100%;
+}
+
+.form_button{
+	height: 20px;
+	width: 100%;
+	text-align: center;
+	border: 1px solid lightgrey;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: lightgrey;
+	transition: background-color 0.5s, border-color 0.5s;
+	font-size: 15px;
+	line-height: 20px;
+}
+
+.buttons_2 .form_button{
+	width: 40%;
+	margin-right: 5%;
+}
+
+.form_button:hover{
+	background-color: lightblue;
+	border-color: lightblue;
+}
+
+.warned, .warned .form, .warned .inputs_1, .warned .inputs_2, .warned .buttons_1, .warned .buttons_2{
+	grid-row-gap: 0;
+}
+
+.warned .form_item, .warned .form_button{
+	margin-top: 20px;
+}
+
+@media (max-width: 700px){
+	.form_div{
+		width: 90%;
+	}
+
+	.title{
+		font-size: 5vw;
+	}
+}
+
+@media (max-width: 400px){
+	.title{
+		font-size: 7vw;
+	}
+}

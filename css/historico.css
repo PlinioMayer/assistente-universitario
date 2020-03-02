@@ -1,0 +1,74 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	display: grid;
+	position: relative;
+	min-height: 100vh;
+	text-align: center;
+	justify-items: center;
+	align-items: center;
+	grid-template-rows: 10vh 1fr;
+	grid-row-gap: 20px;
+	padding-bottom: 20px;
+}
+
+#tabela_tabelas{
+	display: grid;
+	grid-auto-rows: 40px;
+	width: 250px;
+	grid-template-columns: 1fr;
+	grid-row-gap: 5px;
+	grid-auto-flow: row;
+	align-items: center;
+	justify-items: center;
+	border: 2px solid lightgray;
+	border-radius: 5px;
+	background-color: darkgray;
+}
+
+.tabela{
+	display: inline-block;
+	font-size: 15px;
+	line-height: 40px;
+	background-color: white;
+	width: 100%;
+	border: none;
+	text-align: center;
+	transition: color 0.5s, background-color 0.5s;
+	cursor: pointer;
+}
+
+.tabela:hover{
+	background-color: darkgray;
+}
+
+#criar_tabela{
+	display: none;
+}
+
+#materia_label{
+	justify-self: left;
+	align-self: center;
+}
+
+#faltas_label{
+	justify-self: left;
+	align-self: center;
+}
+
+#nenhum{
+	margin-top: 20px;
+	grid-column: 1/3;
+	justify-self: center;
+}
+
+@media (max-width: 768px)
+{
+	body{
+		grid-template-rows: 40px 1fr;
+	}
+}

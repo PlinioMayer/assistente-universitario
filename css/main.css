@@ -1,0 +1,101 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	display: grid;
+	position: relative;
+	min-height: 100vh;
+	text-align: center;
+	justify-items: center;
+	align-items: center;
+	grid-template-rows: 10vh 1fr;
+	grid-row-gap: 20px;
+	padding-bottom: 20px;
+}
+
+#atualizar_tabela{
+	display: none;
+}
+
+#tabela_materias{
+	display: grid;
+	grid-auto-rows: auto;
+	width: 250px;
+	grid-template-columns: 1fr 1fr;
+	grid-row-gap: 10px;
+}
+
+.div_materia{
+	display: grid;
+	grid-template-columns: 1fr 0.5fr 0.33333fr 0.25fr;
+	grid-template-rows: 20px;
+	grid-auto-rows: auto;
+	grid-column: 1/3;
+	border: 1px solid black;
+	justify-items: center;
+	align-items: center;
+	grid-auto-flow: row;
+}
+
+.disabled .div_materia{
+	grid-template-columns: 1fr 0.333333fr 0.333333fr;
+}
+
+#titulo{
+	border: 0;
+}
+
+.materias{
+	width: 100%;
+	justify-self: start;
+	text-indent: 3px;
+	text-align: left;
+	border: 0;
+}
+
+.faltas{
+	border: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.max{
+	border: none;
+	text-align: center;
+	width: 100%;
+}
+
+.mais{
+	line-height: 100%;
+	font-size: 20px;
+	font-weight: bold;
+	color: blue;
+	cursor: pointer;
+	text-align: center;
+}
+
+#add{
+	justify-self: left;
+	width: 80%;
+	height: 20px;
+}
+
+#atualizar{
+	justify-self: right;
+	width: 80%;
+	height: 20px;
+}
+
+.warning{
+	text-align: center;
+}
+
+@media (max-width: 768px)
+{
+	body{
+		grid-template-rows: 40px 1fr;
+	}
+}
