@@ -175,9 +175,9 @@
 		{
 			try
 			{
-        $result = $this->conn->query("SHOW TABLES LIKE '$table'")->fetch(PDO::FETCH_NUM);
+        $result = $this->conn->query("SHOW TABLES LIKE '$table'");
 
-				if($result)
+				if($result->rowCount() > 0)
 				{
 					return true;
 				}
